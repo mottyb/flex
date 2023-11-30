@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+   font-family: 'Poppins', sans-serif;
+}
+
+:root {
+   --primary-color: #e4a803;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+
+.dark {
+   background-color: #262626;
+   color: #fff;
+}
+
+/* header / footer */
+
+header, footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 60px;
+   border-bottom: 1px solid gray;
+   padding: 0 1rem;
+}
+
+footer {
+   border-top: 1px solid gray;
+   justify-content: center;
+   margin-top: 1rem;
+}
+
+.logo span {
+   color: var(--primary-color);
+   font-weight: bold;
+}
+
+header ul {
+   display: flex;
+   gap: 1rem;
+   list-style: none;
+}
+
+header li {
+   transition: all ease-in-out .2s;
+}
+
+header li:hover {
+   color: var(--primary-color);
+}
+
+header li.active {
+   color: var(--primary-color);
+   border-bottom: 2px solid var(--primary-color);
+
+}
+
+.darkModeToggle {
+   cursor: pointer;
+}
+
+
+
+/* main */
+
+.hero {
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 5rem 0;
+   justify-content: center;
+   align-items: center;
+}
+
+.hero img, .hero .text {
+   width: 500px;
+   max-width: 100%;
+}
+
+.hero img {
+   mix-blend-mode: lighten;
+   border-radius: 20px;
+}
+
+.hero .text {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   padding: 0 1rem;
+}
+
+.hero .text h1 {
+   color: var(--primary-color);
+}
+
+.hero .text a {
+   padding: .3rem 1rem;
+   border-radius: 40px;
+   border: 1px solid var(--primary-color);
+   color: var(--primary-color);
+   width: fit-content;
+   font-size: .8rem;
+   transition: all ease-in-out .1s;
+}
+
+.hero .text a:hover {
+   background-color: var(--primary-color);
+   color: #fff;
+}
+
+.container {
+   padding: 0 1rem;
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 5rem 1rem;
+}
+
+.section.first {
+   background-color: #3f3f3f80;
+   border-radius: 40px;
+   text-align: center;
+}
+
+.section.first p {
+   max-width: 600px;
+}
+
+.line {
+   background-color: var(--primary-color);
+   height: 8px;
+   border-radius: 40px;
+   width: 50px;
+   margin-bottom: 2rem;
+   margin-top: .5rem;
+}
+
+.team {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+
+}
+
+.team .card {
+   border-radius: 20px;
+   box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3),
+      10px 10px 20px 0 rgba(255, 255, 255, 0.3);
+   width: 300px;
+   padding: 1rem;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   align-items: center;
+   font-weight: 300;
+}
+
+.team .card .whats {
+   color: rgb(57, 241, 57);
+   transition: all ease-in-out .2s;
+}
+
+.team .card .whats:hover {
+   transform: scaleX(1.2);
+}
+
+.team .card img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 5px solid var(--primary-color);
+   transition: all ease-in-out .5s;
+}
+
+.team .card img:hover {
+   transform: rotate(360deg);
+}
+
+@media (width < 700px) {
+   .hero {
+      text-align: center;
+      padding: 2rem 0.6rem;
+      gap: 1rem;
+   }
+
+   .hero .text a {
+      margin: auto;
+   }
+
+   .team {
+      flex-direction: column;
+   }
+
+   .team .card {
+      width: 100%;
+   }
+
+}
+
+/* about */
+
+.about table {
+   /* background-color: #363636; */
+   border-radius: 10px;
+   overflow: hidden;
+   margin: auto;
+}
+
+.about th, .about td {
+   padding: .3rem 1.2rem;
+}
+
+
+.about td {
+   font-size: .8rem;
+}
+
+.about tr:nth-child(even), .about th {
+   background-color: #262626;
+   color: #fff;
+}
+
+.about th {
+   text-transform: uppercase;
+}
+
+.table-container {
+   width: 100%;
+   overflow-x: auto;
+}
+
+@media (width < 700px) {
+   .about td, .about th {
+      font-size: .7rem;
+   }
+}
+
+/* faq */
+
+.container-faq {
+   padding: 1rem;
+   max-width: 800px;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.container-faq h1 {
+   text-align: center;
+}
+
+.container-faq img {
+   border-radius: 20px;
+   max-height: 80vh;
+   object-fit: contain;
+}
+
+.faq-item p {
+   font-size: .7rem;
+}
